@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5666C1EB-51E2-45FF-925C-D9DD06BAEE82}</ProjectGuid>
+    <ProjectGuid>{67CD6099-2C3D-42DF-BB9C-CF858ADC8D22}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>MoodTracker.iOS</RootNamespace>
@@ -133,7 +133,12 @@
     </Reference>
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
-  <Import Project="..\MoodTracker\MoodTracker.projitems" Label="Shared" Condition="Exists('..\MoodTracker\MoodTracker.projitems')" />
+  <ItemGroup>
+    <ProjectReference Include="..\MoodTracker\MoodTracker.csproj">
+      <Project>{b905ec9f-638c-48c1-972a-8e6fa4980aa6}</Project>
+      <Name>MoodTracker</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

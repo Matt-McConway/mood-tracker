@@ -6,12 +6,12 @@
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   IgnorableNamespaces="uap mp">
 
-  <Identity 
-    Name="3b261b93-0cf9-4a8e-a5fa-b5e7fc7f89e2"
+  <Identity
+    Name="09516012-529b-47b8-8565-eb0d9fb06e24"
     Publisher="CN=Matt McConway"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="f736c883-f105-4d30-a719-4bf328872f5e" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="09516012-529b-47b8-8565-eb0d9fb06e24" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>MoodTracker.UWP</DisplayName>
@@ -29,8 +29,8 @@
 
   <Applications>
     <Application Id="App"
-        Executable="$targetnametoken$.exe"
-        EntryPoint="MoodTracker.UWP.App">
+      Executable="$targetnametoken$.exe"
+      EntryPoint="MoodTracker.UWP.App">
       <uap:VisualElements
         DisplayName="MoodTracker.UWP"
         Square150x150Logo="Assets\Square150x150Logo.png"
