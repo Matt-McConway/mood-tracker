@@ -9,9 +9,17 @@ namespace MoodTracker
 {
     public partial class MainPage : ContentPage
     {
+        string moodEntry;
         public MainPage()
         {
             InitializeComponent();
         }
+
+        void OnMoodEntry(object sender, EventArgs e)
+        {
+            moodEntry = moodText.Text;
+
+        }
+
     }
 }

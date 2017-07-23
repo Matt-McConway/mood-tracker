@@ -4,8 +4,14 @@
              xmlns:local="clr-namespace:MoodTracker"
              x:Class="MoodTracker.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
+     <ContentPage.Content>
+        <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Orientation="Vertical"
+                     Spacing="15">
+            <Label Text="Pour your heart out!" />
+            <Entry x:Name="moodText" Text="So far, today has been pretty great!" />
+            <Button x:Name="enterMoodButton" Text="Enter mood" Clicked="OnMoodEntry" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
