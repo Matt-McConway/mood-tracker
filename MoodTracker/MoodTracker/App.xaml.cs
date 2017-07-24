@@ -9,11 +9,13 @@ namespace MoodTracker
 {
     public partial class App : Application
     {
+        public static IList<string> PastMoods { get; set; }
+
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MoodTracker.MainPage();
+            PastMoods = new List<string>();
+            MainPage = new MoodTracker.MainPage(); // Starting page.
         }
 
         protected override void OnStart()
