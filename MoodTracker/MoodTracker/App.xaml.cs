@@ -14,7 +14,6 @@ namespace MoodTracker
         public App()
         {
             InitializeComponent();
-            PastMoods = new List<string>();
             MainPage = new MoodTracker.MainPage(); // Starting page.
         }
 

@@ -68,9 +68,15 @@ namespace MoodTracker
 
                 //SentimentModel responseModel = JsonConvert.DeserializeObject<SentimentModel>(responseString);
 
+                moodtrackereasytable model = new moodtrackereasytable()
+                {
+                    Content = moodContent,
+                    Sentiment = sentimentStr
+                };
 
-                string moodFinal = moodContent + " : " + sentimentStr;
-                App.PastMoods.Add(moodFinal); 
+                await AzureManager.AzureManagerInstance.PostMoodInformation(model);
+                //string moodFinal = moodContent + " : " + sentimentStr;
+                //App.PastMoods.Add(moodFinal); 
             }
         }
     }

@@ -9,13 +9,31 @@
                     Android="20, 20, 20, 20"
                     WinPhone="20, 20, 20, 20" />
     </ContentPage.Padding>
+
     <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand"
-                     HorizontalOptions="FillAndExpand"
-                     Orientation="Vertical"
-                     Spacing="15">
+        <StackLayout>
             <Button x:Name="returnButton" Text="Return" Clicked="OnReturnClicked" />
-            <ListView ItemsSource="{x:Static local:App.PastMoods}" />
+            <Button Text="Fetch History" Clicked="Handle_ClickedAsync" />
+            <ListView x:Name="MoodHistoryList" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Content, StringFormat='Content: {0:N}'}" HorizontalOptions="FillAndExpand" Margin="20,0,0,0" VerticalTextAlignment="Center" />
+                                <Label Text="{Binding Sentiment, StringFormat='Sentiment: {0:N}'}" VerticalTextAlignment="Center" Margin="0,0,20,0" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
+
+
+
+
+
+
+
+    
 </ContentPage>
