@@ -14,7 +14,6 @@
                      HorizontalOptions="Center"
                      Orientation="Vertical"
                      Spacing="15">
-            <ActivityIndicator x:Name="AnalysisIndicator" IsRunning="False"/>
             <Label Text="Pour your heart out!" />
             <Entry x:Name="moodText" Text="So far, today has been pretty great!" />
             <Button x:Name="enterMoodButton" Text="Enter mood" Clicked="OnMoodEntry" />
